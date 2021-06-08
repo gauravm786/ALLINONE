@@ -134,7 +134,7 @@ server.listen(PORT)
 
 //29. (copy link from mongodb atlas)mongodb+srv://<username>:<password>@cluster0.b4muw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
-//30. create variable and assign the link to it
+//30. create variable and assign the link to it (also comment out server.listen(PORT)at the end as it will be used inside .then())
 
 //31. the whole link should be written inside''and write your datbasename and password inside'',like this
 //const dbURL='mongodb+srv://gaurav4:gaurav786@cluster0.b4muw.mongodb.net/library?retryWrites=true&w=majority'
