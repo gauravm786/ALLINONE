@@ -137,7 +137,7 @@ export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
     //res.send(users)
-    User.findById(req.params.id) 
+    User.findById(req.params.id) //for passing user id,req.param.id is used
     .then
     (
         (result)=>
@@ -184,12 +184,12 @@ export const updateUserById=(req,res)=> //patch is basically used to update a pa
     console.log("In function call updateUserById.. I this /users endpoint got hit.")
     //res.send(users)
     User.findByIdAndUpdate
-    (req.params.id, 
-    {name:req.body.name,
-    gender:req.body.gender,
-    age:req.body.age,
-    city:req.body.city
-
+    (req.params.id, //for passing user id,req.param.id is used
+    {
+name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
     }) 
     .then
     (

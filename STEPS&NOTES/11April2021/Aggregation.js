@@ -354,10 +354,10 @@ export const getUsers=(req,res)=>
 
 // inside () of new User add key and value like this, for name,gender,age and city
 /*{
-        name:req.body.name,
-        gender:req.body.gender,
-        age:req.body.age,
-        city:req.body.city,
+       name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
     }
 */
 
@@ -389,11 +389,10 @@ export const createUser=(req,res)=>        //createUser is used for creating new
 
     const user=new User //this User is from model
     (
-        {
-            name:req.body.name,
-            gender:req.body.gender,
-            age:req.body.age,
-            city:req.body.city,
+        {name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+            gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+            age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+            city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
         }
     )
 
@@ -438,7 +437,7 @@ user.save()//save() makes sure that data is stored inside the database
 export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
-    User.findById(req.params.id) 
+    User.findById(req.params.id) //for passing user id,req.param.id is used
     .then
     (
         (result)=>
@@ -502,10 +501,10 @@ export const createUser=(req,res)=>        //createUser is used for creating new
     const user=new User //this User is from model
     (
         {
-            name:req.body.name,
-            gender:req.body.gender,
-            age:req.body.age,
-            city:req.body.city,
+            name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+            gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+            age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+            city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
         }
     )
 
@@ -531,7 +530,7 @@ user.save()//save() makes sure that data is stored inside the database
 export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
-    User.findById(req.params.id) 
+    User.findById(req.params.id) //for passing user id,req.param.id is used
     .then
     (
         (result)=>
@@ -699,12 +698,12 @@ export const deleteUserById=(req,res)=>
 
 //102. go to updateUserById and  type this User.findByIdAndUpdate() and inside () of User.findByIdAndUpdate type req.params.id and then use attributes inside {} seperated by comma like this:-
     User.findByIdAndUpdate
-    (req.params.id, 
+    (req.params.id, //for passing user id,req.param.id is used
     {
-    name:req.body.name,      //The req. body object allows you to access data in a string or JSON object from the client side for name
-    gender:req.body.gender,  //similarly for gender,age,city
-    age:req.body.age,        
-    city:req.body.city
+        name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
     }
     ) 
 
@@ -728,12 +727,12 @@ export const updateUserById=(req,res)=> //patch is basically used to update a pa
     console.log("In function call updateUserById.. I this /users endpoint got hit.")
     //res.send(users)
     User.findByIdAndUpdate
-    (req.params.id, 
-    {name:req.body.name,
-    gender:req.body.gender,
-    age:req.body.age,
-    city:req.body.city
-
+    (req.params.id, //for passing user id,req.param.id is used
+    {
+        name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
     }) 
     .then
     (
@@ -820,10 +819,10 @@ export const createUser=(req,res)=>        //createUser is used for creating new
     const user=new User //this User is from model
     (
         {
-            name:req.body.name,
-            gender:req.body.gender,
-            age:req.body.age,
-            city:req.body.city,
+            name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+            gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+            age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+            city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
         }
     )
 
@@ -850,7 +849,7 @@ export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
     //res.send(users)
-    User.findById(req.params.id) 
+    User.findById(req.params.id) //for passing user id,req.param.id is used
     .then
     (
         (result)=>
@@ -897,12 +896,12 @@ export const updateUserById=(req,res)=> //patch is basically used to update a pa
     console.log("In function call updateUserById.. I this /users endpoint got hit.")
     //res.send(users)
     User.findByIdAndUpdate
-    (req.params.id, 
-    {name:req.body.name,
-    gender:req.body.gender,
-    age:req.body.age,
-    city:req.body.city
-
+    (req.params.id,  //for passing user id,req.param.id is used
+    {
+        name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
     }) 
     .then
     (
@@ -1161,10 +1160,10 @@ export const createUser=(req,res)=>        //createUser is used for creating new
     const user=new User //this Uaer is from model
     (
         {
-            name:req.body.name,
-            gender:req.body.gender,
-            age:req.body.age,
-            city:req.body.city,
+        name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
         }
     )
 
@@ -1191,7 +1190,7 @@ export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
     //res.send(users)
-    User.findById(req.params.id) 
+    User.findById(req.params.id) //for passing user id,req.param.id is used
     //User.findById returns promise because (req.param.id) function is executed asnynchronously
     //by behaviour of promise it is fixed that it has two function .then() and .catch()
     //so in future if promise has response or result then .then() function is executed
@@ -1242,12 +1241,12 @@ export const updateUserById=(req,res)=> //patch is basically used to update a pa
     console.log("In function call updateUserById.. I this /users endpoint got hit.")
     //res.send(users)
     User.findByIdAndUpdate
-    (req.params.id, 
-    {name:req.body.name,
-    gender:req.body.gender,
-    age:req.body.age,
-    city:req.body.city
-
+    (req.params.id, //for passing user id,req.param.id is used
+    {
+        name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
     }) 
     .then
     (
@@ -1343,7 +1342,6 @@ export default router //router is exported to index.js*/
 //http://localhost:7777/user?age=50 (for using aggregation) 
 
 //135. Inside libray folder we have three folders(controller,model,router) and now push library folder to github
-
 
 
 

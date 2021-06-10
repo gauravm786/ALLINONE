@@ -156,7 +156,7 @@ user.save()//save() makes sure that data is stored inside the database
 export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
-    User.findById(req.params.id) 
+    User.findById(req.params.id) //for passing user id,req.param.id is used
     .then
     (
         (result)=>

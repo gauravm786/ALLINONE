@@ -133,7 +133,7 @@ server.listen(PORT)
 
 //29. (copy link from mongodb atlas)mongodb+srv://<username>:<password>@cluster0.b4muw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
-//30. create variable and assign the link to it (also comment out server.listen(PORT)at the end as it will be used inside .then())
+//30. create variable and assign the link to it
 
 //31. the whole link should be written inside''and write your datbasename and password inside'',like this
 //const dbURL='mongodb+srv://gaurav4:gaurav786@cluster0.b4muw.mongodb.net/library?retryWrites=true&w=majority'
@@ -350,14 +350,14 @@ export const getUsers=(req,res)=>
 
 //65. now go to createUser and now comment out user.push(req.body)
 
-//66. create user object for User model //const user = new User()
+//66. create user object for  User model //const user = new User()
 
 // inside () of new User add key and value like this, for name,gender,age and city
 /*{
-        name:req.body.name,
-        gender:req.body.gender,
-        age:req.body.age,
-        city:req.body.city,
+        name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
     }
 */
 
@@ -390,10 +390,10 @@ export const createUser=(req,res)=>        //createUser is used for creating new
     const user=new User //this User is from model
     (
         {
-            name:req.body.name,
-            gender:req.body.gender,
-            age:req.body.age,
-            city:req.body.city,
+        name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+        gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+        age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+        city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
         }
     )
 
@@ -438,7 +438,7 @@ user.save()//save() makes sure that data is stored inside the database
 export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
-    User.findById(req.params.id) 
+    User.findById(req.params.id)  //for passing user id,req.param.id is used
     .then
     (
         (result)=>
@@ -457,7 +457,7 @@ export const getUserById=(req,res)=>
 }
 
 
-//84. controllers>users.js will look like this:-
+//84. controller>users.js will look like this:-
 
 //for using this schema we need to import it,for importing it we can simply use import statement
 import {User} from '../model/users.js'
@@ -501,11 +501,10 @@ export const createUser=(req,res)=>        //createUser is used for creating new
 
     const user=new User //this User is from model
     (
-        {
-            name:req.body.name,
-            gender:req.body.gender,
-            age:req.body.age,
-            city:req.body.city,
+        {name:req.body.name, //req.body.name will get the name(Gaurav) you entered in the webpage or postman and will assign it to the name variable on the left side in the webpage
+            gender:req.body.gender, //req.body.gender will get the gender(Male) you entered in the webpage or postman and will assign it to the gender variable on the left side in the webpage
+            age:req.body.age,  //req.body.age will get the age(22) you entered in the webpage or postman and will assign it to the age variable on the left side in the webpage 
+            city:req.body.city,  //req.body.city will get the city(Mumbai) you entered in the webpage or postman and will assign it to the city variable on the left side in the webpage
         }
     )
 
@@ -531,7 +530,7 @@ user.save()//save() makes sure that data is stored inside the database
 export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
-    User.findById(req.params.id) 
+    User.findById(req.params.id) //for passing user id,req.param.id is used
     .then
     (
         (result)=>

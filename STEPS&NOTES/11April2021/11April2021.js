@@ -130,7 +130,7 @@ export const getUserById=(req,res)=>
 {
     console.log("In function call getUserById.. I this /users endpoint got hit.")
     //res.send(users)
-    User.findById(req.params.id) 
+    User.findById(req.params.id) //for passing user id,req.param.id is used
     //User.findById returns promise because (req.param.id) function is executed asnynchronously
     //by behaviour of promise it is fixed that it has two function .then() and .catch()
     //so in future if promise has response or result then .then() function is executed
@@ -181,7 +181,7 @@ export const updateUserById=(req,res)=> //patch is basically used to update a pa
     console.log("In function call updateUserById.. I this /users endpoint got hit.")
     //res.send(users)
     User.findByIdAndUpdate
-    (req.params.id, 
+    (req.params.id, //for passing user id,req.param.id is used
     {name:req.body.name,
     gender:req.body.gender,
     age:req.body.age,
