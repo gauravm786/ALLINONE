@@ -11,7 +11,7 @@
 //9. also create new file inside routes and name it as users.js and then code inside users.js
 //10. install nodemon and use nodemon and use postman
 //11. create database on mongodb atlas and connect it our VScode,inside index.js
-//12. create model schema
+//12. create model or schema
 //13. create new API on controller 
 //14. import model inside controller and import controller inside routes and import routes inside index.js
 //15. finally use postman to get desired output
